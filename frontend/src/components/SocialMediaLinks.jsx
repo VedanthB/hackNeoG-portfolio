@@ -1,17 +1,40 @@
 import React from "react";
-import { BsTwitter, BsLinkedin, BsGithub } from "react-icons/bs";
+import {
+  BsTwitter,
+  BsLinkedin,
+  BsGithub,
+  BsStackOverflow,
+} from "react-icons/bs";
+
+import { FiCodesandbox } from "react-icons/fi";
+
+import { FaDev } from "react-icons/fa";
+
+import { SiReplit } from "react-icons/si";
 
 const SocialMedia = () => (
   <div className="app__social">
-    <div>
+    <a href="/" target="_blank" rel="noreferrer">
       <BsTwitter />
-    </div>
-    <div>
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
       <BsGithub />
-    </div>
-    <div>
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
       <BsLinkedin />
-    </div>
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
+      <BsStackOverflow />
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
+      <FiCodesandbox />
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
+      <FaDev />
+    </a>
+    <a href="/" target="_blank" rel="noreferrer">
+      <SiReplit />
+    </a>
   </div>
 );
 
