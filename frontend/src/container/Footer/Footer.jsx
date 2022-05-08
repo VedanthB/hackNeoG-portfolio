@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
+import { myDetails } from "../../portfolio";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -47,14 +48,14 @@ const Footer = () => {
       <div className="app__footer-cards">
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:vedanthbora@gmial.com" className="p-text">
-            vedanthbora@gmail.com
+          <a href={`mailto:${myDetails.email}`} className="p-text">
+            {myDetails.email}
           </a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">
-            +1 (123) 456-7890
+          <a href={myDetails.phone} className="p-text">
+            {myDetails.phone}
           </a>
         </div>
       </div>

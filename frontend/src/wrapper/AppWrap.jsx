@@ -1,6 +1,7 @@
 import React from "react";
 import { SideNavigation, SocialMediaLinks } from "../components";
 import { useTheme } from "../context";
+import { myDetails } from "../portfolio";
 
 const AppWrap = (Component, idName, classNames) =>
   function HOC() {
@@ -23,7 +24,7 @@ const AppWrap = (Component, idName, classNames) =>
                 theme === "light" ? "p-text" : "p-text white-color"
               }`}
             >
-              @2022 VEDANTH
+              @2022 {myDetails.firstName.toUpperCase()}
             </p>
             <p
               className={`${
