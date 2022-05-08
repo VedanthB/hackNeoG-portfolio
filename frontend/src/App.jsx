@@ -1,20 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.scss";
+import { Navbar } from "./components";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-
   return (
-    <div>
-      <button onClick={() => setCounter((counter) => counter + 1)}>
-        {" "}
-        increment{" "}
-      </button>
-      {counter}
-      <button onClick={() => setCounter((counter) => counter - 1)}>
-        {" "}
-        decrement{" "}
-      </button>
+    <div className="app">
+      <Navbar />
     </div>
   );
 };
