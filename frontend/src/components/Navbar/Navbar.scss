@@ -7,12 +7,17 @@
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  //   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  // box-shadow: 0 6px 16px 0 rgba(31, 38, 135, 0.5);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
+}
+
+.theme-toggle {
+  font-size: 2rem;
+  color: var(--secondary-color);
 }
 
 .app__navbar-logo {
@@ -56,8 +61,15 @@
       margin-bottom: 5px;
     }
 
-    a {
+    .app__navbar-link-light {
       color: var(--gray-color);
+    }
+
+    .app__navbar-link-dark {
+      color: white;
+    }
+
+    a {
       text-decoration: none;
       flex-direction: column;
 

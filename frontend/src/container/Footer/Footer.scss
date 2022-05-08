@@ -8,6 +8,10 @@
   }
 }
 
+.white-color {
+  color: white;
+}
+
 .app__footer-cards {
   width: 60%;
   display: flex;
@@ -87,10 +91,10 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      background-color: var(--secondary-color);
 
       font-family: var(--font-base);
-      color: var(--secondary-color);
+      color: white;
       outline: none;
     }
 

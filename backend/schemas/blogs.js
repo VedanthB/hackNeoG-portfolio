@@ -14,13 +14,10 @@ export default {
             type:'string'
         },
         {
-            name:'imgurl',
-            title:'ImgUrl',
-            type: 'image',
-            options: {
-              hotspot: true,
-            },
-        },  
+            name:'link',
+            title:'Link',
+            type:'string'
+        },
         {
             name:'summary',
             title:'Summary',

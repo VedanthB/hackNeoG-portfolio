@@ -1,17 +1,37 @@
 import React from "react";
 import { SideNavigation, SocialMediaLinks } from "../components";
+import { useTheme } from "../context";
 
 const AppWrap = (Component, idName, classNames) =>
   function HOC() {
+    const { theme } = useTheme();
+
     return (
-      <div id={idName} className={`app__container ${classNames}`}>
+      <div
+        id={idName}
+        className={`app__container ${
+          theme === "light" ? "app__primarybg" : "app__darkbg"
+        } ${classNames}`}
+      >
         <SocialMediaLinks />
         <div className="app__wrapper app__flex">
           <Component />
 
           <div className="copyright">
-            <p className="p-text">@2022 VEDANTH</p>
-            <p className="p-text">All rights reserved</p>
+            <p
+              className={`${
+                theme === "light" ? "p-text" : "p-text white-color"
+              }`}
+            >
+              @2022 VEDANTH
+            </p>
+            <p
+              className={`${
+                theme === "light" ? "p-text" : "p-text white-color"
+              }`}
+            >
+              All rights reserved
+            </p>
           </div>
         </div>
         <SideNavigation active={idName} />

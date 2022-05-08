@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
+import { useTheme } from "../../context";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const query = '*[_type == "about"]';
@@ -18,7 +20,11 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2
+        className={`${
+          theme === "light" ? "head-text" : "head-text white-color"
+        }`}
+      >
         I Know that <span>Good Design</span> <br />
         means <span>Good Business</span>
       </h2>
@@ -33,10 +39,20 @@ const About = () => {
             key={about.title + index}
           >
             <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>
+            <h2
+              className={`${
+                theme === "light" ? "bold-text" : "bold-text white-color"
+              }`}
+              style={{ marginTop: 20 }}
+            >
               {about.title}
             </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
+            <p
+              className={`${
+                theme === "light" ? "p-text" : "p-text white-color"
+              }`}
+              style={{ marginTop: 10 }}
+            >
               {about.description}
             </p>
           </motion.div>
@@ -46,8 +62,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(About, "app__about"),
-  "about",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(About, "app__about"), "about");

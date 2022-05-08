@@ -11,6 +11,14 @@
   background-color: var(--primary-color);
 }
 
+.app__darkbg {
+  background-color: var(--dark-mode-color);
+}
+
+.white-color {
+  color: white;
+}
+
 .app__container {
   width: 100%;
   min-height: 100vh;
@@ -47,7 +55,7 @@
 
   p {
     text-transform: uppercase;
-    color: var(--black-color);
+    // color: var(--black-color);
   }
 }
 

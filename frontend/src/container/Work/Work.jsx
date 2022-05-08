@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
+import { useTheme } from "../../context";
 
-let categories = ["UI/UX", "Web App", "Mobile App", "React JS", "All"];
+let categories = ["UI/UX", "JavaScript", "React JS", "All"];
 
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+
+  const { theme } = useTheme();
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -40,7 +43,11 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2
+        className={`${
+          theme === "light" ? "head-text" : "head-text white-color"
+        }`}
+      >
         My Creative <span>Portfolio</span> Section
       </h2>
 

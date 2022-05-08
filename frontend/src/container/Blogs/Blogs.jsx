@@ -11,6 +11,7 @@ const Blogs = () => {
 
   const handleClick = (index) => {
     setCurrentIndex(index);
+    console.log(blogs[currentIndex].link);
   };
 
   useEffect(() => {
@@ -27,10 +28,20 @@ const Blogs = () => {
         <>
           <div className="app__blogs-item app__flex">
             <div className="app__blogs-content">
-              <p className="p-text">{blogs[currentIndex].feedback}</p>
-              <div>
-                <h4 className="bold-text">{blogs[currentIndex].name}</h4>
-                <h5 className="p-text">{blogs[currentIndex].company}</h5>
+              <p className="p-text">{blogs[currentIndex].summary}</p>
+              <div className="app__blogs-desc">
+                <div>
+                  <h4 className="bold-text">{blogs[currentIndex].name}</h4>
+                  <h5 className="p-text">{blogs[currentIndex].tags}</h5>
+                </div>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={blogs[currentIndex].link}
+                  className="bold-text"
+                >
+                  Read Blog
+                </a>
               </div>
             </div>
           </div>
