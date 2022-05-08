@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { Navbar } from "./components";
-import { About, Header } from "./container";
+import { About, Header, Work } from "./container";
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
+      <Work />
     </div>
   );
 };
