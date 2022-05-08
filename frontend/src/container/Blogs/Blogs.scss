@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.white-color {
+  color: white;
+}
+
 .app__blogs-item {
   width: 100%;
   min-height: 320px;
@@ -38,6 +42,25 @@
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
+  }
+}
+
+.app__blogs-desc {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  a {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 

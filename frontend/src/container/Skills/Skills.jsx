@@ -6,13 +6,16 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import "./Skills.scss";
+import { useTheme } from "../../context";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
 
+  const { theme } = useTheme();
+
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
+    const query = '*[_type == "experience"]';
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
@@ -26,7 +29,13 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2
+        className={`${
+          theme === "light" ? "head-text" : "head-text white-color"
+        }`}
+      >
+        Skills & Experiences
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -64,7 +73,15 @@ const Skills = () => {
                       data-for={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
+                      <h4
+                        className={`${
+                          theme === "light"
+                            ? "bold-text"
+                            : "bold-text white-color"
+                        }`}
+                      >
+                        {work.name}
+                      </h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
                     <ReactTooltip
@@ -88,6 +105,6 @@ const Skills = () => {
 
 export default AppWrap(
   MotionWrap(Skills, "app__skills"),
-  "skills",
-  "app__whitebg"
+  "skills"
+  // "app__whitebg"
 );
