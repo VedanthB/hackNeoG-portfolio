@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import "./Navbar.scss";
 import { useTheme } from "../../context";
+import { myDetails } from "../../portfolio";
 
 let links = ["home", "about", "work", "skills", "contact"];
 
@@ -18,7 +19,7 @@ const Navbar = () => {
         <span className={`${theme === "light" ? "grey-color" : "white-color"}`}>
           &lt;
         </span>
-        <span className="logo-name"> vedanth bora </span>
+        <span className="logo-name"> {myDetails.fullName} </span>
         <span className={`${theme === "light" ? "grey-color" : "white-color"}`}>
           /&gt;
         </span>
