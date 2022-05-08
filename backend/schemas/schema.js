@@ -4,6 +4,14 @@ import createSchema from 'part:@sanity/base/schema-creator'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
+import works from './works'
+import blogs from './blogs'
+import about from './about'
+import experience from './experience'
+import skills from './skills'
+import workExperience from './workExperience'
+import contact from './contact'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -12,5 +20,12 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    blogs,
+    works,
+    about,
+    experience,
+    skills,
+    workExperience,
+    contact
   ]),
 })
