@@ -1,6 +1,3 @@
-# hackNeogG portfolio template
-
-
 # hackNeog - React Portfolio Template
 
 ## **About**
