@@ -1,3 +1,6 @@
+# hackNeogG portfolio template
+
+
 # hackNeog - React Portfolio Template
 
 ## **About**
@@ -67,7 +70,7 @@ cd backend
 
 - now in the backend folder replace the `schema` folder with this folder
 
-[https://www.notion.so](https://www.notion.so)
+[15kGx_by4cC6yQ94VJJZwSnlEy-s4aUiy?usp=sharing](https://drive.google.com/drive/folders/15kGx_by4cC6yQ94VJJZwSnlEy-s4aUiy?usp=sharing)
 
 - Edit   `frontend/src/portfolio.js` and add your personal details and social media links
 
@@ -115,3 +118,4 @@ REACT_APP_SANITY_TOKEN = your api token
 ![Screenshot 2022-05-09 at 6.25.48 AM.png](hackNeogG%20portfolio%20template%20365ec77faa4f40caa800e955b1cbef88/Screenshot_2022-05-09_at_6.25.48_AM.png)
 
 ---
+
