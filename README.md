@@ -6,6 +6,7 @@ A simplified personal resume website template  built with webpack and React/Babe
 
 ### DEMO WEBSITE: [https://hackneog-portfolio.netlify.app/](https://hackneog-portfolio.netlify.app/)
 
+### Notion Link with instructions to make the portfolio your own [https://rich-trail-286.notion.site/hackNeogG-portfolio-template-58532f3cc7ad4e048eb0fc29e2166945](https://rich-trail-286.notion.site/hackNeogG-portfolio-template-58532f3cc7ad4e048eb0fc29e2166945)
 ---
 
 ## **Features**
